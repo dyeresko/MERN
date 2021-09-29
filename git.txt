@@ -1,0 +1,5 @@
+git init                                                # Git запускается для данного репозитория
+git add .                                               # Добавляет содержимое рабочего каталога в индекс для последующего коммита
+git commit -m "initial commit"                          # Сохраняет снимок сцены в виде коммита с сообщением "initial commit"
+git remote add origin git@github.com:dyeresko/test.git  # Создает новый пульт с именем origin расположенным по адресу git@github.com:dyeresko/test.git
+git push -u origin master                               # Загрузка в ваш репозиторий под псевдонимом origin локальных изменений в основной ветке master. 
