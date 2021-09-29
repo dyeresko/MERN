@@ -1,0 +1,29 @@
+1.
+cd var/www/html # Переход в директорию html
+ls -d */ # Вывод списка всех папок (без файлов)
+2.
+cd logs # Переход в директорию logs
+grep -v '^$' error.txt > newError.txt # Удаление пустых строк и передача данных в новый файл newError.txt
+mv newError.txt error.txt # Переименование newError.txt на error.txt
+3.
+cd ../images # Переход в директорию images
+ls *.jpg # Вывод списка файлов с расширением .jpg в папке images
+4.
+cd ../logs # Переход в директорию logs
+vi script.sh
+#!/bin/bash
+for file in *.txt
+do
+   mv "$file" "${file%.txt}.log"
+done
+5.
+cd ../  # Переход в предыдующую директорию
+chmod -rwx images # Удаление прав для всех пользователй
+chown www-data:www-data images # Изменене владельцев директории
+chmod ug+rw images # Добавление прав чтения и записи для пользователя и группы
+6.
+cd logs # Переход в директорию logs
+echo -n > access.txt # Удаление содержимого access.txt
+7.
+cd ../images # Переход в директорию images
+find . -maxdepth 1 -type f -size +2M # Вывод списка файлов в папке images размер которых более 2 мегабайт
